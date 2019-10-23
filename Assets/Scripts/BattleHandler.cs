@@ -17,25 +17,28 @@ public static class BattleHandler
     {
         //This needs to be replaced with some actual battle logic, present 
         // we just award the maximum possible win to the player
+        // Battle logic added. 
+        //Each battle is determined by stats and luck. Luck has a random value.
         int points = 0;
         int tj = 0;
 
 
         if (data.player.luck > 5)
         {
-            points = Random.Range(-5, 6);
-            //Random.Range(0, 50);
+            points = Random.Range(-6, 7);
+            
         }
         else
         {
-            points = Random.Range(-6, 5);
+            points = Random.Range(-7, 6);
 
-           // points = -10;
+           
         }
 
         tj = (data.player.style + data.player.luck - data.player.rhythm) / 2 + points;
 
         if (tj > 0)
+
         {
             Debug.Log("Win");
 

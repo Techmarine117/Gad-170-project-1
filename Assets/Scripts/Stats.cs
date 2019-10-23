@@ -21,5 +21,6 @@ public class Stats : MonoBehaviour
     {
         //assign initial stats
         StatsGenerator.InitialStats(this);
+
     }
 }
